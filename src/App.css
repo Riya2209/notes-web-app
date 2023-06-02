@@ -1,38 +1,118 @@
-.App {
-  text-align: center;
+* {
+  top: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.25rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-flow: row nowrap;
+  text-align: left;
+  justify-content: left;
+  margin: 15px;
+}
+
+.note{
+  background-color: lightcyan;
+  min-height: 200px;
+  border: 1px solid rgba(0,0,0,0.3);
+  border-radius: 5px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  padding: 1rem;
+  white-space: pre-wrap
+}
+.note:hover{
+  transform: scale(1.02);
+  box-shadow: 2px 2px 4px 2px rgba(0,0,0,0.3);
+}
+.note-footer{
+  display: flex;
+  flex-flow: row nowrap;
+  text-align: center;
+  justify-content: space-between;
+}
+.container{
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
+  min-height: 100vh;
+}
+.notes-list{
+  padding: 15px;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px , 1fr));
+}
+.note.new-note{
+  background-color: lightpink;
+}
+textarea{
+  border: none;
+  resize: none;
+  background-color: lightpink;
+}
+textarea:focus{
+  outline: none;
+}
+.save{
+  background-color: #e1e1e1;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 10px 5px 10px;
+  font-weight: 500;
+}
+.save:hover{
+  background-color: dodgerblue;
+  box-shadow: 2px 2px 4px 2px rgba(0,0,0,0.3);
+  cursor: pointer;
+}
+.trash-icon:hover{
+  cursor: pointer;
+  color: rgb(219, 14, 14)
+}
+.search{
+  display: flex;
+  flex-flow: row;
+  text-align: center;
+  background-color: lightgray;
+  margin: 15px;
+  margin-bottom: 1rem;
+  padding: 5px;
+  border: none;
+  border-radius: 18px;
+  /* height: 40px; */
+}
+.search-icon{
+  margin-left: 10px;
+}
+.search input{
+  background-color: lightgray;
+  border: none;
+  height: 30px;
+  font-size: 18px;
+  padding: 10px;
+}
+.search input:focus{
+  outline: none;
+}
+.toggle-header{
+  /* background-color: aquamarine; */
+  width: 1200px;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+.dark-mode {
+  background-color: #000;
+}
+.dark-mode h1{
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
